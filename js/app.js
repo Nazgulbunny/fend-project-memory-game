@@ -178,6 +178,13 @@ function removeStar() {
     $(".num-stars").text(String(numStars));
 };
 
+//Restore stars
+function resetStars() {
+    $(".fa-star-o").attr("class", "fa fa-star");
+    numStars = 3;
+    $(".num-stars").text(String(numStars));
+};
+
 //Variables
 var open = [];
 var matched = 0;
