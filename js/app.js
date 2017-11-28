@@ -185,6 +185,11 @@ function resetStars() {
     $(".num-stars").text(String(numStars));
 };
 
+//win modal function
+function showModal() {
+    modal.css("display", "block");
+};
+
 //Variables
 var open = [];
 var matched = 0;
