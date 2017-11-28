@@ -190,6 +190,9 @@ function showModal() {
     modal.css("display", "block");
 };
 
+//Play again event listener
+$(".play-again").click(playAgain);
+
 //Variables
 var open = [];
 var matched = 0;
