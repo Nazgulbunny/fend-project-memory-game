@@ -24,6 +24,9 @@ var deck =["fa-diamond", "fa-diamond", "fa-paper-plane-o", "fa-paper-plane-o", "
  	timeReset();
  };
 
+//make a random game board
+$(makeCards);
+
 // Shuffle function from http://stackoverflow.com/a/2450976
 function shuffle(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;
