@@ -162,6 +162,15 @@ function resetTimer() {
     timer.clearTime = setInterval(startTimer, 1000);
 };
 
+//Function to update moves and to remove stars
+function updateMoveCounter() {
+    $(".moves").text(moveCounter);
+
+    if (moveCounter === hard || moveCounter === medium) {
+        removeStar();
+    }
+};
+
 //Variables
 var open = [];
 var matched = 0;
