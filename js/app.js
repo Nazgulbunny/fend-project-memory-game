@@ -54,6 +54,11 @@ function shuffle(array) {
     return array;
 }
 
+//Function to check if a card is valid or not
+function isValid(card) {
+    return !(card.hasClass("open") || card.hasClass("match"));
+};
+
 //Mycode goes here
 
 //Variables
