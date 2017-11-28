@@ -125,7 +125,14 @@ var onClick = function() {
     }
 };
 
-
+//win condition
+function hasWon() {
+    if (matched === 16) {
+        return true;
+    } else {
+        return false;
+    }
+};
 
 //Variables
 var open = [];
