@@ -171,6 +171,13 @@ function updateMoveCounter() {
     }
 };
 
+//LAst star remover
+function removeStar() {
+    $(".fa-star").last().attr("class", "fa fa-star-o");
+    numStars--;
+    $(".num-stars").text(String(numStars));
+};
+
 //Variables
 var open = [];
 var matched = 0;
