@@ -59,6 +59,16 @@ function isValid(card) {
     return !(card.hasClass("open") || card.hasClass("match"));
 };
 
+//function to match a card
+
+function checkMatch() {
+    if (open[0].children().attr("class")===open[1].children().attr("class")) {
+        return true;
+    } else {
+        return false;
+    }
+};
+
 //Mycode goes here
 
 //Variables
