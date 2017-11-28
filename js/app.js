@@ -134,6 +134,15 @@ function hasWon() {
     }
 };
 
+//event listener to reset game
+$(".restart").click(resetGame);
+
+//function to reset the game
+var playAgain = function() {
+    resetGame();
+    modal.css("display", "none");
+};
+
 //Variables
 var open = [];
 var matched = 0;
