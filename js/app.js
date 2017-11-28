@@ -12,6 +12,18 @@ var deck =["fa-diamond", "fa-diamond", "fa-paper-plane-o", "fa-paper-plane-o", "
  *   - add each card's HTML to the page
  */
 
+ // function to loop through each card and create its HTML
+
+ function makeCards(){
+ 	deck = shuffle(deck);
+ 	var index = 0;
+ 	$.each($(".card i"),function(){
+ 		$(this).attr("class","fa " + deck[index]);
+ 		index++;
+ 	});
+ 	timeReset();
+ };
+
 // Shuffle function from http://stackoverflow.com/a/2450976
 function shuffle(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;
