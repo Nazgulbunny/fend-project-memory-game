@@ -27,6 +27,18 @@ var deck =["fa-diamond", "fa-diamond", "fa-paper-plane-o", "fa-paper-plane-o", "
 //make a random game board
 $(makeCards);
 
+//Function to reset everything to default state
+var resetGame = function() {
+    open = [];
+    matched = 0;
+    moveCounter = 0;
+    resetTimer();
+    updateMoveCounter();
+    $(".card").attr("class", "card");
+    makeCards();
+    resetStars();
+};
+
 // Shuffle function from http://stackoverflow.com/a/2450976
 function shuffle(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;
@@ -45,7 +57,9 @@ function shuffle(array) {
 //Mycode goes here
 
 //Variables
-
+var open = [];
+var matched = 0;
+var moveCounter = 0;
 
 /*
  * set up the event listener for a card. If a card is clicked:
