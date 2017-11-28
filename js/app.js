@@ -143,10 +143,21 @@ var playAgain = function() {
     modal.css("display", "none");
 };
 
+
+
 //Variables
 var open = [];
 var matched = 0;
 var moveCounter = 0;
+
+
+//Variable for difficulty and timer
+var numStars = 3;
+var timer = {
+    seconds: 0,
+    minutes: 0,
+    clearTime: -1
+};
 
 /*
  * set up the event listener for a card. If a card is clicked:
