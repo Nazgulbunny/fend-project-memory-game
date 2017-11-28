@@ -54,6 +54,15 @@ function shuffle(array) {
     return array;
 }
 
+// open selected card and show the state
+function openCard(card) {
+    if (!card.hasClass("open")) {
+        card.addClass("open");
+        card.addClass("show");
+        open.push(card);
+    }
+};
+
 //Function to check if a card is valid or not
 function isValid(card) {
     return !(card.hasClass("open") || card.hasClass("match"));
