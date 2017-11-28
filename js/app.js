@@ -100,7 +100,32 @@ var setMatch = function() {
     }
 };
 
-//Mycode goes here
+//event listener
+$(".card").click(onClick);
+//function binded to the event listener for game mecchanics
+var onClick = function() {
+    if (isValid( $(this) )) {
+
+        if (open.length === 0) {
+            openCard( $(this) );
+
+        } else if (open.length === 1) {
+            openCard( $(this) );
+            moveCounter++;
+            updateMoveCounter();
+
+            if (checkMatch()) {
+                setTimeout(setMatch, 300);
+
+            } else {
+                setTimeout(resetOpen, 700);
+
+            }
+        }
+    }
+};
+
+
 
 //Variables
 var open = [];
