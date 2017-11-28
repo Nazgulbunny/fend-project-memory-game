@@ -199,6 +199,11 @@ var timer = {
     clearTime: -1
 };
 
+//Variable for difficulty + win modal
+
+var hard = 15;
+var medium = 20;
+var modal = $("#win-modal");
 /*
  * set up the event listener for a card. If a card is clicked:
  *  - display the card's symbol (put this functionality in another function that you call from this one)
