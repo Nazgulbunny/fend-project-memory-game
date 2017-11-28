@@ -78,6 +78,28 @@ function checkMatch() {
     }
 };
 
+//set back a card to default state
+var resetOpen = function() {
+    open.forEach(function(card) {
+        card.toggleClass("open");
+        card.toggleClass("show");
+    });
+    open = [];
+};
+//function that checks if 2 cards are a match
+var setMatch = function() {
+    open.forEach(function(card) {
+        card.addClass("match");
+    });
+    open = [];
+    matched += 2;
+
+    if (hasWon()) {
+        clearInterval(timer.clearTime);
+        showModal();
+    }
+};
+
 //Mycode goes here
 
 //Variables
