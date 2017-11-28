@@ -115,10 +115,10 @@ var onClick = function() {
             updateMoveCounter();
 
             if (checkMatch()) {
-                setTimeout(setMatch, 300);
+                setTimeout(setMatch, 200);
 
             } else {
-                setTimeout(resetOpen, 700);
+                setTimeout(resetOpen, 600);
 
             }
         }
@@ -151,6 +151,16 @@ var startTimer = function() {
     } else {
         timer.seconds++;
     }
+
+//function to reset the timer
+function resetTimer() {
+    clearInterval(timer.clearTime);
+    timer.seconds = 0;
+    timer.minutes = 0;
+    $(".timer").text("0:00");
+
+    timer.clearTime = setInterval(startTimer, 1000);
+};
 
 //Variables
 var open = [];
