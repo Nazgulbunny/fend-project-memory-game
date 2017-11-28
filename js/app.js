@@ -25,6 +25,10 @@ function shuffle(array) {
     return array;
 }
 
+//Mycode goes here
+
+//Variables
+
 
 /*
  * set up the event listener for a card. If a card is clicked:
