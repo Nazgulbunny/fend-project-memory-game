@@ -143,7 +143,14 @@ var playAgain = function() {
     modal.css("display", "none");
 };
 
-
+//Function to increment the timer
+var startTimer = function() {
+    if (timer.seconds === 59) {
+        timer.minutes++;
+        timer.seconds = 0;
+    } else {
+        timer.seconds++;
+    }
 
 //Variables
 var open = [];
