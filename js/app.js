@@ -20,31 +20,31 @@ function shuffle(array) {
 
 
 
-var deck = ["fa-diamond", "fa-diamond", "fa-paper-plane-o", "fa-paper-plane-o", "fa-anchor", "fa-anchor",
+const deck = ["fa-diamond", "fa-diamond", "fa-paper-plane-o", "fa-paper-plane-o", "fa-anchor", "fa-anchor",
            "fa-bolt", "fa-bolt", "fa-cube", "fa-cube", "fa-leaf", "fa-leaf",
            "fa-bicycle", "fa-bicycle", "fa-bomb", "fa-bomb"];
 
 // Game variables
-var open = [];
-var matched = 0;
-var moveCounter = 0;
-var numStars = 3;
-var timer = {
+let open = [];
+const matched = 0;
+const moveCounter = 0;
+const numStars = 3;
+const timer = {
     seconds: 0,
     minutes: 0,
     clearTime: -1
 };
 
 // Difficulty settings 
-var hard = 10;
-var medium = 15;
+const hard = 10;
+const medium = 15;
 
-var modal = $("#win-modal");
+const modal = $("#win-modal");
 
 
 
 // Timerfunction
-var startTimer = function() {
+let startTimer = function() {
     if (timer.seconds === 59) {
         timer.minutes++;
         timer.seconds = 0;
@@ -60,7 +60,7 @@ var startTimer = function() {
         formattedSec = String(timer.seconds);
     }
 
-    var time = String(timer.minutes) + ":" + formattedSec;
+    let time = String(timer.minutes) + ":" + formattedSec;
     $(".timer").text(time);
 };
 
@@ -77,7 +77,7 @@ function resetTimer() {
 // Creates and update card HTML
 function updateCards() {
     deck = shuffle(deck);
-    var index = 0;
+    const index = 0;
     $.each($(".card i"), function(){
       $(this).attr("class", "fa " + deck[index]);
       index++;
@@ -137,7 +137,7 @@ function hasWon() {
 };
 
 //  Checks win condition
-var setMatch = function() {
+let setMatch = function() {
     open.forEach(function(card) {
         card.addClass("match");
     });
@@ -151,7 +151,7 @@ var setMatch = function() {
 };
 
 // Reset cards
-var resetOpen = function() {
+let resetOpen = function() {
     open.forEach(function(card) {
         card.toggleClass("open");
         card.toggleClass("show");
@@ -171,7 +171,7 @@ function openCard(card) {
 
 
 // Resets game
-var resetGame = function() {
+let resetGame = function() {
     open = [];
     matched = 0;
     moveCounter = 0;
@@ -183,7 +183,7 @@ var resetGame = function() {
 };
 
 // Primary game logic function
-var onClick = function() {
+let onClick = function() {
     if (isValid( $(this) )) {
 
         if (open.length === 0) {
@@ -206,7 +206,7 @@ var onClick = function() {
 };
 
 // Play again function
-var playAgain = function() {
+let playAgain = function() {
     resetGame();
     modal.css("display", "none");
 };
