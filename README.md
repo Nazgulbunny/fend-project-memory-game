@@ -1,20 +1,32 @@
 # Memory Game Project
 
-## Table of Contents
+This is a web-browser game matching game. 
 
-* [Instructions](#instructions)
-* [Contributing](#contributing)
+This game is supported in mobile devices too. 
 
 ## Instructions
 
-The starter project has some HTML and CSS styling to display a static version of the Memory Game project. You'll need to convert this project from a static project to an interactive one. This will require modifying the HTML and CSS files, but primarily the JavaScript file.
+** To run the game
+    1. Download or Clone the Repository.
+    2. Open index.html file to view the project in your browser.
 
-To get started, open `js/app.js` and start building out the app's functionality
+** When you access the game the game is ready to be played and as soon as you click on the first card the timer will start counting
 
-For specific, detailed instructions, look at the project instructions in the [Udacity Classroom](https://classroom.udacity.com/me).
+** When a card is clicked it will turn showing the symbol and if the second card 
 
-## Contributing
+** The player then clicks the second card, trying to find the card with the same symbol.
+    1. If the cards match, both cards stay flipped over and the background will become light green.
+    2. If the cards do not match, both cards are flipped face down.
 
-This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
+** Every time the player click 2 cards the counter of the moves increase by one
 
-For details, check out [CONTRIBUTING.md](CONTRIBUTING.md).
+** If the player wants to restart the game before is over he needs just to click the arrow icon on above the right top of the board
+
+** When the game is completed a message will pop up to congratulate the player showing 
+   1.In how many moves he made it 
+   2.How much time he used
+   3.The difficulty level in stars. 
+
+**The player can play again clicking on the button in the pop up, that will reset the board and re-shuffle the cards
+	
+

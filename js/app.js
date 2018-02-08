@@ -5,7 +5,7 @@
 
 // Shuffle function from http://stackoverflow.com/a/2450976
 function shuffle(array) {
-    var currentIndex = array.length, temporaryValue, randomIndex;
+    let currentIndex = array.length, temporaryValue, randomIndex;
 
     while (currentIndex !== 0) {
         randomIndex = Math.floor(Math.random() * currentIndex);
@@ -20,26 +20,26 @@ function shuffle(array) {
 
 
 
-const deck = ["fa-diamond", "fa-diamond", "fa-paper-plane-o", "fa-paper-plane-o", "fa-anchor", "fa-anchor",
+let deck = ["fa-diamond", "fa-diamond", "fa-paper-plane-o", "fa-paper-plane-o", "fa-anchor", "fa-anchor",
            "fa-bolt", "fa-bolt", "fa-cube", "fa-cube", "fa-leaf", "fa-leaf",
            "fa-bicycle", "fa-bicycle", "fa-bomb", "fa-bomb"];
 
 // Game variables
 let open = [];
-const matched = 0;
-const moveCounter = 0;
-const numStars = 3;
-const timer = {
+let matched = 0;
+let moveCounter = 0;
+let numStars = 3;
+let timer = {
     seconds: 0,
     minutes: 0,
     clearTime: -1
 };
 
 // Difficulty settings 
-const hard = 10;
-const medium = 15;
+let hard = 10;
+let medium = 15;
 
-const modal = $("#win-modal");
+let modal = $("#win-modal");
 
 
 
@@ -53,7 +53,7 @@ let startTimer = function() {
     }
 
     
-    var formattedSec = "0";
+    let formattedSec = "0";
     if (timer.seconds < 10) {
         formattedSec += timer.seconds
     } else {
@@ -77,7 +77,7 @@ function resetTimer() {
 // Creates and update card HTML
 function updateCards() {
     deck = shuffle(deck);
-    const index = 0;
+    let index = 0;
     $.each($(".card i"), function(){
       $(this).attr("class", "fa " + deck[index]);
       index++;
