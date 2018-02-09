@@ -1,4 +1,3 @@
-
 /*
  * shuffle() function provided by Udacity's starter code
  */
@@ -83,26 +82,26 @@ function updateCards() {
       index++;
     });
     resetTimer();
-};
+}
 
 //  win modal 
 function showModal() {
     modal.css("display", "block");
-};
+}
 
 // Removes stars
 function removeStar() {
     $(".fa-star").last().attr("class", "fa fa-star-o");
     numStars--;
     $(".num-stars").text(String(numStars));
-};
+}
 
 // Restores stars 
 function resetStars() {
     $(".fa-star-o").attr("class", "fa fa-star");
     numStars = 3;
     $(".num-stars").text(String(numStars));
-};
+}
 
 // Updates number of moves in the HTML
 function updateMoveCounter() {
@@ -111,12 +110,12 @@ function updateMoveCounter() {
     if (moveCounter === hard || moveCounter === medium) {
         removeStar();
     }
-};
+}
 
 // Checks if card is a valid 
 function isValid(card) {
     return !(card.hasClass("open") || card.hasClass("match"));
-};
+}
 
 // Returns a card match
 function checkMatch() {
@@ -125,7 +124,7 @@ function checkMatch() {
     } else {
         return false;
     }
-};
+}
 
 // Win condition
 function hasWon() {
@@ -134,7 +133,7 @@ function hasWon() {
     } else {
         return false;
     }
-};
+}
 
 //  Checks win condition
 let setMatch = function() {
