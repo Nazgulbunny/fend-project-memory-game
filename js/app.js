@@ -16,7 +16,7 @@ function shuffle(array) {
     }
 
     return array;
-};
+}
 
 
 
@@ -55,7 +55,7 @@ let startTimer = function() {
     
     let formattedSec = "0";
     if (timer.seconds < 10) {
-        formattedSec += timer.seconds
+        formattedSec += timer.seconds;
     } else {
         formattedSec = String(timer.seconds);
     }
